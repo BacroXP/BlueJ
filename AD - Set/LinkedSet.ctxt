@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=LinkedSet
+comment1.params=
+comment1.target=LinkedSet()
+comment2.params=data
+comment2.target=void\ addItem(java.lang.Object)
+comment3.params=data\ index
+comment3.target=void\ addItemAtIndex(java.lang.Object,\ int)
+comment4.params=index
+comment4.target=java.lang.Object\ getItem(int)
+comment5.params=
+comment5.target=void\ next()
+comment6.params=
+comment6.target=void\ before()
+comment7.params=
+comment7.target=int\ getSize()
+numComments=8
