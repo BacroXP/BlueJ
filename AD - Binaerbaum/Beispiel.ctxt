@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Beispiel
+comment1.params=
+comment1.target=Beispiel()
+comment2.params=
+comment2.target=int\ getLength()
+comment3.params=
+comment3.target=int\ getDepth()
+comment4.params=element
+comment4.target=boolean\ contains(int)
+numComments=5
