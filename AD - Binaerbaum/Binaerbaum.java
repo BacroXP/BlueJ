@@ -21,22 +21,7 @@ public class Binaerbaum<T>
     {
         return links == null && rechts == null;
     }
-    
-    public int getNElements()
-    {
-        if (links != null && rechts != null) {
-            return links.getNElements() + rechts.getNElements() + 1;
-        }
-        else if (links != null) {
-            return links.getNElements() + 1;
-        }
-        else if (rechts != null) {
-            return rechts.getNElements() + 1;
-        }
 
-        return 1;
-    }
-    
     public int getDepth()
     {
         if (links != null && rechts != null) {

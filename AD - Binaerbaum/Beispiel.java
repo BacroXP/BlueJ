@@ -10,16 +10,40 @@ public class Beispiel
     
     public int getLength()
     {
-        return tree.getNElements();
+        return tree == null ? 0 : getLength(tree.links) + getLength(tree.rechts) + 1;
+    }
+    
+    private int getLength(Binaerbaum tree)
+    {
+        return tree == null ? 0 : getLength(tree.links) + getLength(tree.rechts) + 1;
     }
     
     public int getDepth()
     {
-        return tree.getDepth();
+        return tree == null ? 0 : (getDepth(tree.links) < getDepth(tree.rechts)) ? getDepth(tree.rechts) + 1 : getDepth(tree.links) + 1;
+    }
+    
+    private int getDepth(Binaerbaum tree)
+    {
+        return tree == null ? 0 : (getDepth(tree.links) < getDepth(tree.rechts)) ? getDepth(tree.rechts) + 1 : getDepth(tree.links) + 1;
     }
     
     public boolean contains(int element)
     {
-        return tree.contains(element);
+        return tree == null ? false : ((int) tree.daten == element) ? true : (contains(element, tree.rechts) || contains (element, tree.links));
+    }
+    
+    private boolean contains(int element, Binaerbaum tree) {
+        return tree == null ? false : ((int) tree.daten == element) ? true : (contains(element, tree.rechts) || contains (element, tree.links));
+    }
+    
+    public int sum()
+    {
+        return tree == null ? 0 : (int) tree.daten + sum(tree.links) + sum(tree.rechts);
+    }
+    
+    private int sum(Binaerbaum tree)
+    {
+        return tree == null ? 0 : (int) tree.daten + sum(tree.links) + sum(tree.rechts);
     }
 }
